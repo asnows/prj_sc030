@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Nov 11 17:48:38 2019
+# Process ID: 54016
+# Current directory: E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent50340 E:\WorkSpace\project\FPGA\prj_sc030\prj_sc030\prj_sc030.xpr
+# Log file: E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/vivado.log
+# Journal file: E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/prj_sc030.xpr
+update_compile_order -fileset sources_1
+launch_sdk -workspace E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/prj_sc030.sdk -hwspec E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/prj_sc030.sdk/top.hdf
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/prj_sc030.runs/impl_1/project_top_routed.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/prj_sc030.runs/impl_1/probes_1.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/prj_sc030.runs/impl_1/probes_1.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/prj_sc030.runs/impl_1/probes_1.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/prj_sc030.runs/impl_1/probes_1.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/prj_sc030.runs/impl_1/project_top_routed.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property PROBES.FILE {E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/prj_sc030.runs/impl_1/probes_1.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/prj_sc030.runs/impl_1/probes_1.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/prj_sc030.runs/impl_1/project_top_routed.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+save_wave_config {E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/prj_sc030.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
