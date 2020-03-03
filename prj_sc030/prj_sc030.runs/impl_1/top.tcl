@@ -65,14 +65,27 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  reset_param project.defaultXPMLibraries 
-  open_checkpoint E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/prj_sc030.runs/impl_1/top.dcp
+  create_project -in_memory -part xc7z020clg400-1
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/prj_sc030.cache/wt [current_project]
   set_property parent.project_path E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/prj_sc030.xpr [current_project]
   set_property ip_repo_paths E:/WorkSpace/ip [current_project]
   set_property ip_output_repo E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/prj_sc030.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+  add_files -quiet E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/prj_sc030.runs/synth_1/top.dcp
+  set_msg_config -source 4 -id {BD 41-1661} -limit 0
+  set_param project.isImplRun true
+  add_files E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/prj_sc030.srcs/sources_1/bd/design_1/design_1.bd
+  read_ip -quiet E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/prj_sc030.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci
+  read_ip -quiet E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/prj_sc030.srcs/sources_1/ip/fifo_maxtrix/fifo_maxtrix.xci
+  set_param project.isImplRun false
+  read_xdc E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/prj_sc030.srcs/constrs_1/new/system.xdc
+  set_param project.isImplRun true
+  link_design -top top -part xc7z020clg400-1
+  set_param project.isImplRun false
+  write_hwdef -force -file top.hwdef
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {
@@ -135,7 +148,7 @@ set rc [catch {
   create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation "
   create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file top_incremental_reuse_routed.rpt"
   create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file top_clock_utilization_routed.rpt"
-  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file route_report_bus_skew_0.rpt -rpx route_report_bus_skew_0.rpx"
+  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file top_bus_skew_routed.rpt -pb top_bus_skew_routed.pb -rpx top_bus_skew_routed.rpx"
   close_msg_db -file route_design.pb
 } RESULT]
 if {$rc} {

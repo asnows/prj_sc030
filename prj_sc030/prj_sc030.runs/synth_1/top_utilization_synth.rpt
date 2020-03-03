@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Tue Oct 15 09:16:56 2019
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Tue Mar  3 13:31:53 2020
 | Host         : VT2OB6D7ZB52FZ0 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
@@ -30,8 +30,8 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs*                | 16381 |     0 |     53200 | 30.79 |
-|   LUT as Logic             | 14883 |     0 |     53200 | 27.98 |
+| Slice LUTs*                | 16313 |     0 |     53200 | 30.66 |
+|   LUT as Logic             | 14815 |     0 |     53200 | 27.85 |
 |   LUT as Memory            |  1498 |     0 |     17400 |  8.61 |
 |     LUT as Distributed RAM |   442 |     0 |           |       |
 |     LUT as Shift Register  |  1056 |     0 |           |       |
@@ -95,7 +95,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+--------+
 |          Site Type          | Used | Fixed | Available |  Util% |
 +-----------------------------+------+-------+-----------+--------+
-| Bonded IOB                  |   21 |     0 |       125 |  16.80 |
+| Bonded IOB                  |   22 |     0 |       125 |  17.60 |
 | Bonded IPADs                |    0 |     0 |         2 |   0.00 |
 | Bonded IOPADs               |  130 |     0 |       130 | 100.00 |
 | PHY_CONTROL                 |    0 |     0 |         4 |   0.00 |
@@ -152,12 +152,12 @@ Table of Contents
 |  Ref Name  |  Used |  Functional Category |
 +------------+-------+----------------------+
 | FDRE       | 18745 |         Flop & Latch |
-| LUT3       |  3967 |                  LUT |
-| LUT6       |  3505 |                  LUT |
-| LUT4       |  3108 |                  LUT |
-| LUT2       |  3031 |                  LUT |
-| LUT5       |  2412 |                  LUT |
-| LUT1       |  1768 |                  LUT |
+| LUT3       |  3974 |                  LUT |
+| LUT6       |  3376 |                  LUT |
+| LUT4       |  3182 |                  LUT |
+| LUT2       |  2930 |                  LUT |
+| LUT5       |  2533 |                  LUT |
+| LUT1       |  1693 |                  LUT |
 | CARRY4     |  1166 |           CarryLogic |
 | SRL16E     |   954 |   Distributed Memory |
 | RAMD32     |   662 |   Distributed Memory |
@@ -168,12 +168,12 @@ Table of Contents
 | SRLC32E    |   102 |   Distributed Memory |
 | MUXF7      |    65 |                MuxFx |
 | FDPE       |    55 |         Flop & Latch |
-| IBUF       |    16 |                   IO |
+| IBUF       |    17 |                   IO |
 | RAMB36E1   |    10 |         Block Memory |
 | OBUF       |     5 |                   IO |
 | BUFG       |     5 |                Clock |
+| OBUFT      |     3 |                   IO |
 | RAMB18E1   |     2 |         Block Memory |
-| OBUFT      |     2 |                   IO |
 | DSP48E1    |     2 |     Block Arithmetic |
 | PS7        |     1 | Specialized Resource |
 | MMCME2_ADV |     1 |                Clock |

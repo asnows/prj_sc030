@@ -8,4 +8,4 @@ Start Address      0x00000000
 End Address        0x07FFFFFF
 
 Addr1         Addr2         Date                    File(s)
-0x00000000    0x003DBAFB    Oct 15 16:29:29 2019    E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/prj_sc030.runs/impl_1/project_top_routed.bit
+0x00000000    0x003DBAFB    Mar  3 13:40:48 2020    E:/WorkSpace/project/FPGA/prj_sc030/prj_sc030/prj_sc030.runs/impl_1/top.bit
